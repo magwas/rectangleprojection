@@ -45,5 +45,5 @@ class Animator():
 
     def __call__(self, filename='animation.mp4'):
         anim = animation.FuncAnimation(self.fig, self.animate, init_func=self.generate,
-                                       frames=100, interval=20, blit=True)
+                                       frames=360, interval=20, blit=True)
         anim.save(filename, fps=30, extra_args=['-vcodec', 'libx264'])
